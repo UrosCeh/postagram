@@ -35,6 +35,9 @@
                     <a href="{{ route('user.posts', auth()->user()) }}" class="p-3">{{ auth()->user()->name }}</a>
                 </li>
                 <li>
+                    <a href="{{ route('user.password-change') }}" class="p-3">Change password</a>
+                </li>
+                <li>
                     <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
                         @csrf
                         <button type="submit" style="outline:none">Logout</button>
@@ -52,5 +55,13 @@
         </ul>
     </nav>
     @yield('content')
+
+    <script>
+        var msg = '{{ Session::get('alert') }}';
+        var exist = '{{ Session::has('alert') }}';
+        if(exist){
+          alert(msg);
+        }
+    </script>
 </body>
 </html>

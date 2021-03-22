@@ -7,6 +7,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\PostLikeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserPostController;
+use App\Http\Controllers\ChangePasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,3 +44,6 @@ Route::post('/posts/{post}/likes', [PostLikeController::class, 'store'])->name('
 Route::delete('/posts/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');
 
 Route::get('/user/{user:username}/posts', [UserPostController::class, 'index'])->name('user.posts');
+
+Route::get('/user/password-change', [ChangePasswordController::class, 'index'])->name('user.password-change');
+Route::post('/user/password-change', [ChangePasswordController::class, 'store']);
