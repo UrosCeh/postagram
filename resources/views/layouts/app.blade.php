@@ -32,7 +32,7 @@
             {{-- @if (auth()->user()) --}}
             @auth
                 <li>
-                    <a href="{{ route('user.posts', auth()->user()) }}" class="p-3">{{ auth()->user()->name }}</a>
+                    <a href="{{ route('user.posts', auth()->user()) }}" class="p-3">{{ auth()->user()->username }}</a>
                 </li>
                 <li>
                     <a href="{{ route('user.password-change') }}" class="p-3">Change password</a>
