@@ -32,7 +32,7 @@
             {{-- @if (auth()->user()) --}}
             @auth
                 <li>
-                    <a href="" class="p-3">{{ auth()->user()->name }}</a>
+                    <a href="{{ route('user.posts', auth()->user()) }}" class="p-3">{{ auth()->user()->name }}</a>
                 </li>
                 <li>
                     <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
