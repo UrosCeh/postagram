@@ -1,6 +1,7 @@
 <strong>Prerequisites</strong>
 
 <ol>
+    <li>Instlled composer
     <li>Instlled php, php-mbstring, php-xml
 </ol>
 
