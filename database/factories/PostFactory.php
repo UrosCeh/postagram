@@ -23,7 +23,7 @@ class PostFactory extends Factory
     {
         date_default_timezone_set("Europe/Belgrade");
         $today = date("Y-m-d H:i:s");
-        $yesterday = date('Y-m-d H:i:s', strtotime($today. ' - 1 day'));
+        $yesterday = date('Y-m-d H:i:s', strtotime($today. ' - 24 hours'));
 
         $t = strtotime($today);
         $y = strtotime($yesterday);
